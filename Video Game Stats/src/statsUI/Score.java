@@ -4,19 +4,16 @@ public class Score extends Leaderboards {
 	private int kills;
 	private int assists;
 	private int deaths;
-	private int score = kills * 100 + assists * 50;
+	int score;
 	
-	public Score(){}
-	
-	public Score(int kills, int assists, int deaths, int score) {
+	public Score(int kills, int assists, int deaths) {
 		setKills(kills);
 		setAssists(assists);
 		setDeaths(deaths);
-		setScore(score);
 	}
 	
 	public String toString() {
-		return "Score: " + getScore();
+		return "Score: " + getScore() + " Kills: " + getKills() + " Assists: " + getAssists() + " Deaths: " + getDeaths();
 	}
 	
 	/**
@@ -57,6 +54,7 @@ public class Score extends Leaderboards {
 	 * @return score
 	 */
 	public int getScore() {
+		score = kills * 100 + assists * 50;
 		return score;
 	}
 	public void setScore(int score) {

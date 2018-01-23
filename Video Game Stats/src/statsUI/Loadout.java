@@ -7,8 +7,6 @@ public class Loadout extends playerPicks {
 	private String loadoutName;
 	private int numberOfPerks;
 	
-	public Loadout(){}
-	
 	public Loadout(String primary, String secondary, String leathal, String loadoutName, int numberOfPerks) {
 		setPrimary(primary);
 		setSecondary(secondary);
